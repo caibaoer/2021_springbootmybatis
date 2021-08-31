@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/test?autoReconnect=true&initialTimeout=3&useUnicode=true&characterEncoding=utf-8
+mybatis:
+  mapper-locations: classpath:/mybatis/mapper/*.xml   # 扫描xml配置文件   如果只使用注解，那么这里可以不配置，如果注解和xml都使用的话，需要配置这里以找到xml文件
+  #type-aliases-package:  com.entity                   # 扫描实体类   好像这个配置不要也可以,经过测试确实可以不配置
