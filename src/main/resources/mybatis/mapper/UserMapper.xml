@@ -6,7 +6,7 @@
 <mapper namespace="com.mapper.UserMapper">
 
     <sql id="select">
-		select * from user
+		select * from tb_user
 	</sql>
 
     <delete id="delete" parameterType="int">

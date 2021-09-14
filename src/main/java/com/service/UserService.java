@@ -1,5 +1,6 @@
 package com.service;
 
+import com.entity.Person;
 import com.entity.User;
 
 import java.util.List;
@@ -20,4 +21,6 @@ public interface UserService {
     public int update(Integer id, User user);
 
     public int delete(Integer id);
+
+    Person getPersonById(Integer id);
 }

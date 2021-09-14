@@ -57,12 +57,31 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-
             <!-- optional=true, 依赖不会传递, 该项目依赖devtools; 之后依赖boot项目的项目如果想要使用devtools,
-
                需要重新引入 -->
             <optional>true</optional>
         </dependency>
+
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-typehandlers-jsr310</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+
+        <!--
+        首先什么是JSR310标准，其实就是新出的一些日期类型等的标准在，mybatisplus3.4之后会自己识别，但是在之前的版本就需要手动进行引入。
+        引入之后，mybatis中的日期类型关系就可以使用JSR310的类型进行对应了，
+        LocalDate映射数据库中的date类型
+        LocalTime来映射数据库中的time类型
+        LocalDateTime字段来映射数据库中的datetime类型
+         <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-typehandlers-jsr310</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+         -->
+
 
     </dependencies>
 

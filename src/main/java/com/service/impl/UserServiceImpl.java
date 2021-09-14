@@ -1,5 +1,6 @@
 package com.service.impl;
 
+import com.entity.Person;
 import com.entity.User;
 import com.mapper.UserMapper;
 import com.service.UserService;
@@ -42,5 +43,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public int delete(Integer id) {
         return userMapper.delete(id);
+    }
+
+    @Override
+    public Person getPersonById(Integer id) {
+        return userMapper.getPersonById(id);
     }
 }
